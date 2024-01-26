@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/products/<%=product._id%>?_method=PUT" method="post" >
+        <label for="name">Enter Product Name</label> 
+        <input type="text" value="<%=product.name%>" name="name" id="name">
+        <label for="price">Enter Product Price</label> 
+        <input type="number"  value="<%=product.price%>" name="price" id="price">
+        <label for="category">Enter Product Category</label> 
+        <select name="category" value="<%=product.category%> " id=""> 
+            <% for(let cat of categories){%> 
+            <option value="<%=cat%>" <%=product.category===cat? 'selected':''%> ><%=cat%> </option>
+            <%}%> 
+        </select>
+        <button value="submit">Submit</button>
+        
+    </form>
+</body>
+</html>

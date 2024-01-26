@@ -1,0 +1,10 @@
+.main{ 
+    min-height:93vh;
+    display:flex; 
+    align-items: center;
+    background-image: url('../../background.jpg');
+    background-position: center;
+    background-size: cover;
+    
+}
+
